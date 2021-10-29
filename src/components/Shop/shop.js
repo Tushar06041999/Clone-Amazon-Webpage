@@ -3,6 +3,7 @@ import fakeData from '../../fakeData';
 import { useState } from 'react';
 import './shop.css';
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 
 const Shop = () => {
@@ -31,20 +32,7 @@ const Shop = () => {
              </div>
            <div className="cart-container">
 
-
-         <div className="Orders-summary">  
-         <h3>Oredres Summary</h3>
-         <h4>Item orders :{cart.length}</h4>
-         </div>
-
-          <div>
-              <p>Items                 :${cart.length}</p>
-              <p>Shipping & Handlening :${cart.price}</p>
-              <p>Total Before Tax      :$</p>
-              <p>Estimated Tax         :$</p>
-              <h3>Orders Total         :$</h3>
-          </div>
-          <button className="btn1">Review Your order</button>
+            <Cart cart={cart}></Cart>
            </div>
         </div>
     );
